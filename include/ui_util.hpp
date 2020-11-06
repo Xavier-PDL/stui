@@ -19,6 +19,8 @@
     va_end(acopy);\
 }\
 
+int clamp(int in, int lo, int hi);
+
 void ui_print_text(int color_pair, int attr,
                    const char* fmt, ...);
 void ui_print_text_xy(int x, int y,

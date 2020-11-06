@@ -1,5 +1,12 @@
 #include <ui_util.hpp>
 
+int clamp(int in, int lo, int hi)
+{
+    if(in < lo) return lo;
+    if(in > hi) return hi;
+    return in;
+}
+
 void ui_print_text(int color_pair, int attr,
                    const char* fmt, ...)
 {

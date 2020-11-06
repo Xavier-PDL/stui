@@ -16,6 +16,7 @@ void ui_main::init()
     start_color();
     use_default_colors();
     init_pair(1, 2, -1);
+    curs_set(0);
     pMainWindow = new ui_window(0, 1,
                                 getmaxx(stdscr) - 1, 
                                 getmaxy(stdscr) - 3,
