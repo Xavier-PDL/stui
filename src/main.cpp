@@ -6,14 +6,6 @@
 #include <ui_main.hpp>
 #include <ui_menu.hpp>
 
-const char* choices[] =
-{
-    "Choice 1",
-    "Choice 2",
-    "Choice 3",
-    "Choice 4",
-    "Exit"
-};
 int main(int argc, const char** argv)
 {
     int ch;
@@ -66,17 +58,5 @@ int main(int argc, const char** argv)
     gui.destroy();
     endwin();
 
-    return 0;
-}
-
-int SqliteCallback(void* userArgs,
-                   int numColumns,
-                   char** szColumnData,
-                   char** szColumnName)
-{
-    for(int i = 0; i < numColumns; i++)
-    {
-        printf("%s: %s\n", szColumnName[i], szColumnData[i]);
-    }
     return 0;
 }
